@@ -1,0 +1,87 @@
+body.swal2-toast-shown .swal2-container{
+  width: auto !important;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+}
+.search-container{
+    display: flex;
+
+}
+
+.search-box-input{
+    width: auto;
+    padding: 10px;
+}
+.column1{
+    display: inline-block;
+    width: 50%;
+}
+.column2{
+    width: 50%;
+    text-align: right;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    white-space: pre-wrap; /* Preserve line breaks */
+}
+
+/* Alternate row background color */
+tr:nth-child(odd) {
+  background-color: #f9f9f9; /* Light grey */
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff; /* White */
+}
+th {
+    background-color: #f2f2f2;
+}
+.orange {
+    background-color: #FFD580;
+}
+
+button{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#goToToolButton{
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#goToToolButton:hover {
+  background-color: #0056b3;
+}        

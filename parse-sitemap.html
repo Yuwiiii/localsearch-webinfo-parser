@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Map Parser</title>
+    <link rel="stylesheet" href="./css/sitemap.css" />
+</head>
+<body>
+
+<h1>Site Map Parser</h1>
+<textarea id="inputText" rows="20" cols="100" placeholder="Paste your raw text here..."></textarea><br><br>
+<button onclick="parseData()">Parse Site Map</button>
+
+<h2>Site Map Items</h2>
+<table id="navTable">
+    <thead>
+        <tr>
+            <th>Item Name</th>
+            <th>Parent</th>
+            <th>Type</th>
+            <th>Anchor Links</th>
+        </tr>
+    </thead>
+    <tbody id="navTableBody"></tbody>
+</table>
+<script src="./scripts/sitemap.js"></script>
+</body>
+</html>

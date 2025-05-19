@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            word-wrap: break-word;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #altTextContainer {
+            min-width: 250px;
+            max-width: fit-content;
+        }
+    </style>
+</head>
+<body class="p-6 bg-gray-100">
+    <div class="max-w-7xl mx-auto flex gap-6">
+        <div class="w-1/5 p-4 bg-white shadow-md rounded-lg">
+            <h2 class="font-bold text-lg border-b pb-2 mb-2">Search History</h2>
+            <ul id="searchHistory" class="space-y-2"></ul>
+        </div>
+
+        <div class="w-3/5">
+            <input type="text" id="searchInput" class="w-full p-3 border rounded-lg shadow-sm focus:ring focus:ring-blue-300" placeholder="Search location...">
+            <input type="text" id="companyInput" class="w-full mt-3 p-3 border rounded-lg shadow-sm focus:ring focus:ring-blue-300" placeholder="Enter Company Name...">
+
+            <div class="mt-6">
+                <div class="p-4 bg-white shadow-md rounded-lg mb-6">
+                    <h2 class="font-bold text-lg border-b pb-2 mb-2">Search Results</h2>
+                    <ul id="searchResults" class="space-y-2"></ul>
+                </div>
+
+                <div class="p-4 bg-white shadow-md rounded-lg">
+                    <h2 class="font-bold text-lg border-b pb-2 mb-2">Previous Search Result</h2>
+                    <ul id="previousResult" class="space-y-2"></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-1/5 p-4 bg-white shadow-md rounded-lg" id="altTextContainer">
+            <h2 class="font-bold text-lg border-b pb-2 mb-2">Generated ALT Text</h2>
+            <ul id="altTextOutput" class="space-y-2"></ul>
+
+            <div class="mt-6">
+                <h2 class="font-bold text-lg border-b pb-2 mb-2">Previous ALT Text Results</h2>
+                <ul id="altTextHistory" class="space-y-2"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/locations-generator.js"></script>
+</body>
+</html>
