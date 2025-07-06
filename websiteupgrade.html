@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding Parser</title>
+    <link rel="stylesheet" href="./css/parser.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h1>Onboarding Parser</h1>
+    
+    <textarea id="inputText" rows="20" cols="100" placeholder="Paste your document here..."></textarea>
+    
+    <div class="search-container">
+        <div class="column1">
+            <button id="parseButton">Parse Document</button>
+            <button onclick="exportToCSV()">Download CSV</button>
+            <a href="parse-sitemap.html" target="_blank" id="goToToolButton">Sitemap Parser</a>
+            <a href="locations-generator.html" target="_blank" id="goToToolButton">Locations Generator</a>
+        </div>
+        <div class="column2">
+            <input class="search-box-input" type="text" id="searchInput" placeholder="Search...">
+        </div>
+    </div>
+    
+    <table id="outputTable">
+        <thead>
+            <tr>
+                <th>Field</th>
+                <th>Detail</th>
+                <th>Copy</th> 
+            </tr>
+        </thead>
+        <tbody id="outputBody">
+            <!-- Parsed details will be inserted here -->
+        </tbody>
+    </table>
+
+    <div id="newPagesContainer">
+        <!-- New Pages for Website Upgrade will be inserted here if applicable -->
+    </div>
+    
+    <script src="./scripts/webupgradescript.js"></script>
+</body>
+</html>
