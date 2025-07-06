@@ -21,10 +21,10 @@ textarea {
 }
 .column1{
     display: inline-block;
-    width: 50%;
+    width: 75%;
 }
 .column2{
-    width: 50%;
+    width: 25%;
     text-align: right;
 }
 table {
