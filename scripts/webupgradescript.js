@@ -169,20 +169,24 @@ document.getElementById('searchInput').addEventListener('input', function() {
             }
             
             // Items for Website Upgrade (Trimming)
-            if (/^Item \d+ Action$/.test(trimmedLine) && lines[i + 1]?.trim().toLowerCase() === "new item") {
+           // Items for Website Upgrade (Trimming)
+            if (/^Item \d+ Action$/i.test(trimmedLine)) {
                 const itemNumber = trimmedLine.match(/^Item (\d+)/)?.[1]; 
+                const action = lines[i + 1]?.trim() || "Unknown";
+
                 const itemNameIndex = lines.findIndex(line => line.trim() === `Item ${itemNumber} Name`);
                 const itemName = itemNameIndex !== -1 ? lines[itemNameIndex + 1]?.trim() : "Unknown";
-                const anchorLinksIndex = lines.findIndex(line => line.trim() === `Item ${itemNumber} anchor links`);
+
+                const anchorLinksIndex = lines.findIndex(line => line.trim().toLowerCase() === `item ${itemNumber} anchor links`);
                 const anchorLinks = anchorLinksIndex !== -1 ? lines[anchorLinksIndex + 1]?.trim() : "NA";
-            
-                const parent = lines[i - 9]?.trim();   
-                const type = lines[i - 4]?.trim();    
-                const timestamp = lines[i - 1]?.trim(); 
-            
-                newItems.push({ itemName, parent, type, anchorLinks, timestamp });
-                
+
+                const parent = lines[i - 9]?.trim() || "NA";        // These may need refining if input structure varies
+                const type = lines[i - 4]?.trim() || "NA";
+                const timestamp = lines[i - 1]?.trim() || "";
+
+                newItems.push({ itemName, parent, type, anchorLinks, timestamp, action });
             }
+
             
             
             
@@ -267,6 +271,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
                                 <th>Type</th>
                                 <th>Anchor Links</th>
                                 <th>Date & Time Added</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -277,6 +282,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
                                     <td>${item.type}</td>
                                     <td>${item.anchorLinks}</td>
                                     <td>${item.timestamp}</td>
+                                    <td>${item.action}</td>
                                 </tr>
                             `).join('')}
                         </tbody>
