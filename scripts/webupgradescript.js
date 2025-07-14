@@ -23,6 +23,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
         newPagesContainer.innerHTML = '';
         // Mapping of fields to look for
         const fields = [
+            "Theme Selection",
           "Business Name",
           "ABN",
           "ACN",
