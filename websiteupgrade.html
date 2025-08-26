@@ -14,10 +14,16 @@
     
     <div class="search-container">
         <div class="column1">
-            <button id="parseButton">Parse Document</button>
-            <button onclick="exportToCSV()">Download CSV</button>
-            <a href="parse-sitemap.html" target="_blank" id="goToToolButton">Sitemap Parser</a>
-            <a href="locations-generator.html" target="_blank" id="goToToolButton">Locations Generator</a>
+            <div>
+                <a href="index.html" target="_blank" id="goToToolButton">Website Info Parser</a>
+                <button id="parseButton">Parse Document</button>
+                <button onclick="exportToCSV()">Download CSV</button>
+            </div>
+            <div>
+                <a href="parse-sitemap.html" target="_blank" id="goToToolButton">Sitemap Parser</a>
+                <a href="locations-generator.html" target="_blank" id="goToToolButton">Locations Generator</a>
+                <a href="https://logo-resizer-ajn.vercel.app/" target="_blank" id="goToToolButton">Logo Resizer</a>
+            </div>
         </div>
         <div class="column2">
             <input class="search-box-input" type="text" id="searchInput" placeholder="Search...">
