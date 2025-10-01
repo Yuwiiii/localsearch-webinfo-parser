@@ -35,6 +35,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
           "Would you like your email address displayed on your website?",
           "Additional Email Address/es",
           "Trading Hours",
+          "Special Trading Hours",
           "Do you have any offers or deals you'd like showcased?",
           "How would you like the deal or offers shown on your website?",
           "What deals or offers would you like to display on your website?",
@@ -129,6 +130,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
         let lastDateTime = null;
         let pendingField = null; // Store the field we need to assign date to after finishing
         let pendingDetail = '';  // Store its details
+        let lastField = null;
         // Iterate over the lines to find relevant information
         for (let i = 0; i < lines.length; i++) {
             const trimmedLine = lines[i].trim();

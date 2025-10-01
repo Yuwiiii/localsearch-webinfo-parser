@@ -34,6 +34,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
           "Would you like your email address displayed on your website?",
           "Additional Email Address/es",
           "Trading Hours",
+          "Special Trading Hours",
           "Do you have any offers or deals you'd like showcased?",
           "How would you like the deal or offers shown on your website?",
           "What deals or offers would you like to display on your website?",
