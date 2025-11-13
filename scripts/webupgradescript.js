@@ -73,6 +73,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
           "Secondary Accent Colour Hex Code",
           "Tertiary Accent Colour Hex Code",
           "Website Theme",
+          "Navigation:",
           "Is the client having dynamic pages?",
           "If a CSV is not being provided prior to build please list one product details below",
           "What payment options do you offer?",
@@ -404,5 +405,6 @@ document.getElementById('searchInput').addEventListener('input', function() {
     localStorage.setItem('parserInput', inputText); // Store the input text
     window.open('./parse-sitemap.html', '_blank'); // Open the other HTML file
 });
+
 
 
