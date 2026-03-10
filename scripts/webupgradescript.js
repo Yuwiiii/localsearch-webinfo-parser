@@ -1,3 +1,16 @@
+document.addEventListener("keydown", function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "f") {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const searchInput = document.getElementById("searchInput");
+        if (searchInput) {
+            searchInput.focus();
+            searchInput.select();
+        }
+    }
+}, true);
+
 document.getElementById('searchInput').addEventListener('input', function() {
     const searchValue = this.value.toLowerCase();
     const rows = document.querySelectorAll('#outputTable tbody tr');
@@ -408,6 +421,7 @@ document.getElementById('searchInput').addEventListener('input', function() {
     localStorage.setItem('parserInput', inputText); // Store the input text
     window.open('./parse-sitemap.html', '_blank'); // Open the other HTML file
 });
+
 
 
 
